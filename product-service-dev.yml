@@ -1,3 +1,14 @@
 org:
   zerock:
     title: "Dev Product Service"
+spring:
+  datasource:
+    url: jdbc:postgresql://aws-1-ap-northeast-1.pooler.supabase.com:6543/$postgres
+    username: postgres.ezlnnapzdvfjhwhkpxzf
+    password: 3ae33ef343f
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
