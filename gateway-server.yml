@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      webmvc:
+        default-filters:
+          - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials
+        routes:
+          - id: product-service
+            uri: lb://product-service
+            predicates:
+              - Path=/api/products/**
